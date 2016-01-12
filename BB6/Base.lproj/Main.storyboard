@@ -23,7 +23,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FFc-gH-TO9">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="1078"/>
+                                        <rect key="frame" x="0.0" y="64" width="320" height="1078"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="twr-b7-5yl">
                                                 <rect key="frame" x="8" y="20" width="42" height="21"/>
@@ -141,8 +141,23 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Catch yourself!" id="APr-ic-2S5">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="7Jv-pD-q08"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="7Jv-pD-q08">
+                            <connections>
+                                <action selector="save:" destination="9pv-A4-QxB" id="ecz-4m-uem"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="autoThought" destination="ul4-pI-ocH" id="Qsp-Dk-J3e"/>
+                        <outlet property="evidence" destination="tQ9-uV-exM" id="OQI-mH-LBg"/>
+                        <outlet property="initialEmotion" destination="epm-C5-DIF" id="7p3-cA-dh9"/>
+                        <outlet property="initialIntensity" destination="jfs-Re-Yrh" id="6ru-QQ-Fbm"/>
+                        <outlet property="postEmotion" destination="w4q-QR-E0D" id="6MZ-bo-1q1"/>
+                        <outlet property="postIntensity" destination="sqq-wz-WWm" id="WmN-Ja-Tc3"/>
+                        <outlet property="postThought" destination="eEZ-iN-kgH" id="OJI-jQ-io3"/>
+                        <outlet property="situation" destination="FYq-VF-38Q" id="nqA-2L-ZEm"/>
+                        <outlet property="type" destination="n4V-kn-qav" id="Mht-XV-36i"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="1146" y="-541"/>
