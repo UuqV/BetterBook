@@ -11,6 +11,7 @@ import CoreData
 
 class SecondViewController: UIViewController, UITableViewDataSource {
     
+    
     @IBOutlet weak var tableView: UITableView!
     var people = [NSManagedObject]()
     
@@ -18,8 +19,6 @@ class SecondViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.registerNib(UINib(nibName: "EntryTableViewCell", bundle: nil), forCellReuseIdentifier: "EntryTableViewCell")
-        
-        //tableView.registerClass(EntryViewCell.self, forCellReuseIdentifier: "Cell")
     }
     
     // MARK: UITableViewDataSource
@@ -38,6 +37,8 @@ class SecondViewController: UIViewController, UITableViewDataSource {
             let person = people[indexPath.row]
             
             cell!.situation.text = person.valueForKey("situation") as? String
+            cell!.type.text = person.valueForKey("type") as? String
+            cell!.date.text = person.valueForKey("date") as? String
             
             return cell!
     }
@@ -63,6 +64,16 @@ class SecondViewController: UIViewController, UITableViewDataSource {
         } catch let error as NSError {
             print("Could not fetch \(error), \(error.userInfo)")
         }
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let alert = UIAlertView()
+        alert.delegate = self
+        alert.title = "Selected Row"
+        alert.message = "You selected row \(indexPath.row)"
+        alert.addButtonWithTitle("OK")
+        alert.show()
+        performSegueWithIdentifier("tableEntrySegue", sender: self)
     }
 
 }
