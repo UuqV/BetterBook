@@ -13,11 +13,13 @@ class SecondViewController: UIViewController, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     var people = [NSManagedObject]()
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Entries"
-        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        tableView.registerNib(UINib(nibName: "EntryTableViewCell", bundle: nil), forCellReuseIdentifier: "EntryTableViewCell")
+        
+        //tableView.registerClass(EntryViewCell.self, forCellReuseIdentifier: "Cell")
     }
     
     // MARK: UITableViewDataSource
@@ -31,11 +33,11 @@ class SecondViewController: UIViewController, UITableViewDataSource {
         indexPath: NSIndexPath) -> UITableViewCell {
             
             let cell =
-            tableView.dequeueReusableCellWithIdentifier("Cell")
+            tableView.dequeueReusableCellWithIdentifier("EntryTableViewCell", forIndexPath:indexPath) as? EntryTableViewCell
             
             let person = people[indexPath.row]
             
-            cell!.textLabel!.text = person.valueForKey("init_mood") as? String
+            cell!.situation.text = person.valueForKey("situation") as? String
             
             return cell!
     }
