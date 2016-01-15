@@ -14,6 +14,7 @@ class SecondViewController: UIViewController, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     var people = [NSManagedObject]()
+    var row = Int()
     
     
     override func viewDidLoad() {
@@ -67,13 +68,17 @@ class SecondViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let alert = UIAlertView()
-        alert.delegate = self
-        alert.title = "Selected Row"
-        alert.message = "You selected row \(indexPath.row)"
-        alert.addButtonWithTitle("OK")
-        alert.show()
+        self.row = indexPath.row
         performSegueWithIdentifier("tableEntrySegue", sender: self)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if (segue.identifier == "tableEntrySegue") {
+            var svc = segue.destinationViewController as? EntryViewController;
+            
+            svc!.entry = people[row].valueForKey("situation") as! String
+            
+        }
     }
 
 }
