@@ -76,8 +76,9 @@ class SecondViewController: UIViewController, UITableViewDataSource {
         if (segue.identifier == "tableEntrySegue") {
             var svc = segue.destinationViewController as? EntryViewController;
             
-            svc!.entry = people[row].valueForKey("situation") as! String
-            
+            svc!.str_type = people[row].valueForKey("type") as! String
+            svc!.str_situation = people[row].valueForKey("situation") as! String
+            svc!.date = people[row].valueForKey("date") as! NSDate
         }
     }
 

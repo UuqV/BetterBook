@@ -35,6 +35,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
                     <constraint firstItem="m77-Ji-YY6" firstAttribute="top" secondItem="gVM-8y-flv" secondAttribute="bottom" constant="2" id="0Y6-0g-qTv"/>
                     <constraint firstItem="gVM-8y-flv" firstAttribute="leading" secondItem="e4h-68-9DW" secondAttribute="trailing" constant="56" id="4hj-jE-nVe"/>
@@ -50,6 +51,7 @@
                     <constraint firstItem="gVM-8y-flv" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="yuk-J4-boR"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
                 <outlet property="date" destination="gVM-8y-flv" id="WTT-71-CNw"/>
                 <outlet property="situation" destination="m77-Ji-YY6" id="F57-TF-hvT"/>

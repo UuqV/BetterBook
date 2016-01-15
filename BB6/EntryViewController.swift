@@ -10,14 +10,18 @@ import UIKit
 import CoreData
 
 class EntryViewController: UIViewController {
+    var str_type:String!
+    var str_situation:String!
+    var date:NSDate!
     
-    @IBOutlet weak var testLabel: UILabel!
-    var entry:String!
+    @IBOutlet weak var situation: UILabel!
+    @IBOutlet weak var type: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        testLabel.text = entry
+        type.text = str_type
+        situation.text = str_situation
     }
     
     override func didReceiveMemoryWarning() {
