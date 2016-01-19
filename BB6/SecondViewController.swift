@@ -72,13 +72,46 @@ class SecondViewController: UIViewController, UITableViewDataSource {
         performSegueWithIdentifier("tableEntrySegue", sender: self)
     }
     
+    @IBAction func turnOnDelete(sender: AnyObject) {
+        tableView.editing = !tableView.editing
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.Delete {
+            
+            let appDelegate =
+            UIApplication.sharedApplication().delegate as! AppDelegate
+            
+            let managedContext = appDelegate.managedObjectContext
+            
+            managedContext.deleteObject(people[row])
+            people.removeAtIndex(row)
+            do {
+                try managedContext.save()
+            }
+            catch {
+                
+            }
+            
+            
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+        }
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if (segue.identifier == "tableEntrySegue") {
-            var svc = segue.destinationViewController as? EntryViewController;
+            let svc = segue.destinationViewController as? EntryViewController;
             
             svc!.str_type = people[row].valueForKey("type") as! String
             svc!.str_situation = people[row].valueForKey("situation") as! String
             svc!.date = people[row].valueForKey("date") as! NSDate
+            svc!.str_autoThought = people[row].valueForKey("init_thought") as! String
+            svc!.str_initEmotion = people[row].valueForKey("init_mood") as! String
+            svc!.str_evidence = people[row].valueForKey("evidence") as! String
+            svc!.str_postIntensity = people[row].valueForKey("post_intensity") as! Int
+            svc!.str_initIntensity = people[row].valueForKey("init_intensity") as! Int
+            svc!.str_postEmotion = people[row].valueForKey("post_mood") as! String
+            svc!.str_postThought = people[row].valueForKey("post_thought") as! String
         }
     }
 
