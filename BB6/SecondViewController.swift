@@ -39,7 +39,10 @@ class SecondViewController: UIViewController, UITableViewDataSource {
             
             cell!.situation.text = person.valueForKey("situation") as? String
             cell!.type.text = person.valueForKey("type") as? String
-            cell!.date.text = person.valueForKey("date") as? String
+            
+            let formatter = NSDateFormatter()
+            formatter.dateStyle = .ShortStyle
+            cell!.date.text = formatter.stringFromDate(person.valueForKey("date") as! NSDate)
             
             return cell!
     }
@@ -102,9 +105,12 @@ class SecondViewController: UIViewController, UITableViewDataSource {
         if (segue.identifier == "tableEntrySegue") {
             let svc = segue.destinationViewController as? EntryViewController;
             
+            let formatter = NSDateFormatter()
+            formatter.dateStyle = .ShortStyle
+            svc!.str_entryDate = formatter.stringFromDate(people[row].valueForKey("date") as! NSDate)
+            
             svc!.str_type = people[row].valueForKey("type") as! String
             svc!.str_situation = people[row].valueForKey("situation") as! String
-            svc!.date = people[row].valueForKey("date") as! NSDate
             svc!.str_autoThought = people[row].valueForKey("init_thought") as! String
             svc!.str_initEmotion = people[row].valueForKey("init_mood") as! String
             svc!.str_evidence = people[row].valueForKey("evidence") as! String

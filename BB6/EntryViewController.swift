@@ -13,7 +13,7 @@ class EntryViewController: UIViewController {
     
     var str_type:String!
     var str_situation:String!
-    var date:NSDate!
+    var str_entryDate:String!
     var str_initEmotion:String!
     var str_initIntensity:Int!
     var str_postIntensity:Int!
@@ -45,6 +45,7 @@ class EntryViewController: UIViewController {
         autoThought.text = str_autoThought
         evidence.text = str_evidence
         postThought.text = str_postThought
+        entryDate.text = str_entryDate
     }
     
     override func didReceiveMemoryWarning() {
