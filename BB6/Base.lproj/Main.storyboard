@@ -26,14 +26,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FFc-gH-TO9">
-                                        <rect key="frame" x="0.0" y="-454" width="320" height="1137"/>
+                                        <rect key="frame" x="0.0" y="-8" width="320" height="1137"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="twr-b7-5yl">
                                                 <rect key="frame" x="8" y="79" width="42" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="42" id="s0h-xU-Wxi"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -60,7 +60,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="75" id="AEC-gr-aUZ"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -69,13 +69,13 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="154" id="Wa0-Lu-rVk"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Evidence" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ipa-VW-NcG">
                                                 <rect key="frame" x="8" y="526" width="75" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -84,7 +84,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="69" id="ghR-KJ-Kta"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -94,7 +94,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="150" id="VpQ-76-KNe"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ul4-pI-ocH">
@@ -120,7 +120,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="111" id="Sat-18-Ptq"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -133,9 +133,9 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Emotion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oJF-tb-DIu">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="New Emotion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oJF-tb-DIu">
                                                 <rect key="frame" x="8" y="904" width="102" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -498,7 +498,7 @@
         <scene sceneID="yGe-Yn-Fmi">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zvd-8r-lhc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="New Entry" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="New Entry" image="Edit-50" selectedImage="Edit-50.png" id="acW-dT-cKf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="JlK-Iv-jud">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -517,7 +517,7 @@
         <scene sceneID="Gmn-IO-BBs">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kzx-RN-1qm" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="View Diary" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="View Diary" image="Bookmark-50" selectedImage="Bookmark-50" id="cPa-gy-q4n"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="cce-Lg-RJL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -534,7 +534,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="second" width="30" height="30"/>
+        <image name="Bookmark-50" width="50" height="50"/>
+        <image name="Edit-50" width="50" height="50"/>
+        <image name="Edit-50.png" width="50" height="50"/>
         <image name="textured_paper" width="500" height="500"/>
     </resources>
 </document>
