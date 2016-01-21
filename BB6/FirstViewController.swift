@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class FirstViewController: UIViewController {
+class FirstViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelegate {
 
     @IBOutlet weak var type: UITextField!
     @IBOutlet weak var initialEmotion: UITextField!
@@ -21,12 +21,39 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var postEmotion: UITextField!
     @IBOutlet weak var postIntensity: UISlider!
     
+    let pickerDataSource = ["Filtering", "Black & White", "Overgeneralization", "Jumping to Conclusions",
+        "Catastrophizing", "Personalization", "Fallacy of Control", "Fallacy of Fairness", "Blaming", "Shoulds",
+        "Fallacy of Change", "Global Labelling", "Imperitive to be Right", "Heaven's Reward Fallacy"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        let distortions = UIPickerView()
+        distortions.dataSource = self
+        distortions.delegate = self
+        
+        type.inputView = distortions
     }
-
+    
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        type.text = pickerDataSource[0]
+        return pickerDataSource.count
+    }
+    
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return pickerDataSource[row]
+    }
+    
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
+    {
+        type.text = pickerDataSource[row]
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
