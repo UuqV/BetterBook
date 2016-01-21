@@ -22,16 +22,17 @@ class EntryViewController: UIViewController {
     var str_evidence:String!
     var str_postThought:String!
     
+    @IBOutlet weak var situation: UITextView!
     @IBOutlet weak var entryDate: UILabel!
-    @IBOutlet weak var situation: UILabel!
     @IBOutlet weak var type: UILabel!
     @IBOutlet weak var initEmotion: UILabel!
     @IBOutlet weak var initIntensity: UILabel!
     @IBOutlet weak var postEmotion: UILabel!
     @IBOutlet weak var postIntensity: UILabel!
-    @IBOutlet weak var autoThought: UILabel!
-    @IBOutlet weak var evidence: UILabel!
-    @IBOutlet weak var postThought: UILabel!
+    @IBOutlet weak var autoThought: UITextView!
+    @IBOutlet weak var evidence: UITextView!
+    @IBOutlet weak var postThought: UITextView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

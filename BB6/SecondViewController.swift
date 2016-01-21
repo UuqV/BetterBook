@@ -15,6 +15,7 @@ class SecondViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     var people = [NSManagedObject]()
     var row = Int()
+    @IBOutlet weak var deleteLabel: UIBarButtonItem!
     
     
     override func viewDidLoad() {
@@ -76,7 +77,14 @@ class SecondViewController: UIViewController, UITableViewDataSource {
     }
     
     @IBAction func turnOnDelete(sender: AnyObject) {
-        tableView.editing = !tableView.editing
+        if (tableView.editing == false) {
+            tableView.editing = true
+            deleteLabel.title = "Done"
+        }
+        else {
+            tableView.editing = false
+            deleteLabel.title = "Delete"
+        }
     }
     
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
